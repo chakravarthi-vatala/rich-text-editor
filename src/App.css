@@ -1,0 +1,21 @@
+#editor1 {
+  width: 95%;
+  height: 80%;
+  background-color: white;
+  border-radius: 4px;
+  margin: 5% auto;
+}
+
+b {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1%;
+}
