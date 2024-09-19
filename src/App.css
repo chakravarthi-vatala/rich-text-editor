@@ -2,7 +2,7 @@
   width: 95%;
   height: 80%;
   background-color: white;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   margin: 5% auto;
 }
 
@@ -10,6 +10,8 @@ b {
   color: rgb(255, 0, 0);
   font-weight: bold;
   font-size: 18px;
+  margin-left: 3%;
+  /* padding-right: 0%; */
 }
 
 #label {
@@ -17,5 +19,10 @@ b {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 1%;
+  margin-top: 4%;
+}
+
+#editor {
+  height: 100%;
+  border: none;
 }

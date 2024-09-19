@@ -51,6 +51,7 @@ export default function TextEditor() {
         if (classifierRef.current) {
           try {
             const output = await classifierRef.current(editorContent);
+            console.log("output", output);
             setLabel(output[0].label);
             setScore(output[0].score);
             document.getElementById("label").style.display = "block";
@@ -75,10 +76,9 @@ export default function TextEditor() {
 
   return (
     <>
-      <div ref={editorRef} id="editor" style={{ height: "397px" }}></div>
+      <div ref={editorRef} id="editor" /*style={{ height: "90%" }}*/></div>
       <div id="label">
         <b>Label:{label}</b>
-        <br />
         <b>Score:{score}</b>
       </div>
     </>
