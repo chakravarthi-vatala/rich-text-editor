@@ -1,3 +1,5 @@
+import { faThumbsDown, faThumbsUp } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { env, pipeline } from "@xenova/transformers";
 import Quill from "quill";
 import "quill/dist/quill.snow.css";
@@ -12,13 +14,21 @@ export default function TextEditor() {
   let [label, setLabel] = useState([]);
   let [score, setScore] = useState([]);
   const labelColor = label === "POSITIVE" ? "green" : "red";
+  const iconToDisplay = label === "POSITIVE" ? faThumbsUp : faThumbsDown;
 
   useEffect(() => {
     if (editorRef.current && !quillInstance.current) {
       quillInstance.current = new Quill(editorRef.current, {
         debug: "info",
         modules: {
-          toolbar: true,
+          toolbar: [
+            [{ header: [1, 2, false] }],
+            ["bold", "italic", "underline"], // Text formatting
+            ["link", "image", "video"], // Link, image, video options
+            [{ list: "ordered" }, { list: "bullet" }], // Lists
+            [{ "code-block": true }], // Code block
+            ["clean"], // Clear formatting
+          ],
         },
         placeholder: "Type here....",
         theme: "snow",
@@ -82,7 +92,10 @@ export default function TextEditor() {
         <b id="left">
           Label:&nbsp;
           <span id="labelColor" style={{ color: labelColor }}>
-            {label}
+            {label}&nbsp;
+            <span>
+              <FontAwesomeIcon icon={iconToDisplay} />
+            </span>
           </span>
         </b>
         <b id="right">

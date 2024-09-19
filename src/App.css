@@ -1,7 +1,7 @@
 #editor1 {
   width: 95%;
   height: 80%;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   /* border-radius: 4px; */
   margin: 5% auto;
 }
@@ -13,7 +13,7 @@ b {
   margin-left: 3%;
   /* padding-right: 0%; */
 }
-span {
+#label span {
   font-weight: bold;
   font-size: 20px;
 }
@@ -35,15 +35,18 @@ span {
 
 #editor {
   height: 100%;
+  /* width: 100%; */
   border: none;
 }
 
 #right {
   right: 0;
   position: absolute;
+  padding-left: 0%;
 }
 
 #left {
   left: 0;
   position: absolute;
+  margin-left: 0%;
 }
