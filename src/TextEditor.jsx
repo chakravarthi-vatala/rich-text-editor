@@ -11,6 +11,7 @@ export default function TextEditor() {
   const classifierRef = useRef(null); // Store the classifier once it's loaded
   let [label, setLabel] = useState([]);
   let [score, setScore] = useState([]);
+  const labelColor = label === "POSITIVE" ? "green" : "red";
 
   useEffect(() => {
     if (editorRef.current && !quillInstance.current) {
@@ -78,8 +79,15 @@ export default function TextEditor() {
     <>
       <div ref={editorRef} id="editor" /*style={{ height: "90%" }}*/></div>
       <div id="label">
-        <b>Label:{label}</b>
-        <b>Score:{score}</b>
+        <b id="left">
+          Label:&nbsp;
+          <span id="labelColor" style={{ color: labelColor }}>
+            {label}
+          </span>
+        </b>
+        <b id="right">
+          Confidence:&nbsp;<span>{score}</span>
+        </b>
       </div>
     </>
   );
