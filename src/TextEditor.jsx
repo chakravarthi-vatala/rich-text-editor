@@ -70,7 +70,7 @@ export default function TextEditor() {
             console.error("Error classifying text:", error);
           }
         }
-      }, 5000);
+      }, 3000);
     };
 
     if (quillInstance.current) {
