@@ -4,6 +4,8 @@
   background-color: rgb(255, 255, 255);
   /* border-radius: 4px; */
   margin: 5% auto;
+  /* color: white; */
+  /* border: 2px solid rgb(0, 0, 0); */
 }
 
 b {
@@ -34,19 +36,67 @@ b {
 }
 
 #editor {
-  height: 100%;
+  height: 70%;
+  margin-bottom: 0%;
   /* width: 100%; */
-  border: none;
+  /* border: 0px solid; */
+  background-color: rgb(236, 236, 236);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* border: 1px solid; */
 }
 
+.ql-toolbar,
+.ql-snow {
+  border: 5px solid;
+}
 #right {
   right: 0;
   position: absolute;
-  padding-left: 0%;
+  /* padding-left: 0%; */
 }
 
 #left {
   left: 0;
   position: absolute;
-  margin-left: 0%;
+  /* margin-left: 0%; */
+}
+
+@media (max-width: 600px) {
+  #label {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto; /* Adjust height to fit the content */
+    padding: 5% 2%; /* Add some padding to the container */
+  }
+
+  #left,
+  #right {
+    position: static; /* Remove absolute positioning for mobile */
+    margin: 0; /* Reset margins */
+  }
+
+  #left {
+    margin-bottom: 2%; /* Add spacing between label and confidence */
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  font-size: 2rem; /* Adjust the size of the spinner as needed */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ql-toolbar span {
+  /* background-color: rgb(255, 255, 255); */
+  border-radius: 5px;
 }

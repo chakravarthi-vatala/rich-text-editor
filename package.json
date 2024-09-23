@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:esbuild": "esbuild src/main.jsx --jsx=automatic --bundle --minify --outfile=build/rte-chakri-index.js --sourcemap --loader:.woff=file --loader:.woff2=file --loader:.ttf=file ",
+    "dev:esbuild": "esbuild src/main.jsx --jsx=automatic  --watch --bundle --minify --outfile=build/rte-chakri-index.js --sourcemap --loader:.woff=file --loader:.woff2=file --loader:.ttf=file",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -15,6 +17,7 @@
     "@mlc-ai/web-llm": "^0.2.62",
     "@xenova/transformers": "^2.17.2",
     "lodash": "^4.17.21",
+    "lucide-react": "^0.441.0",
     "quill": "^2.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -24,6 +27,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "esbuild": "0.23.1",
     "eslint": "^9.9.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
