@@ -1,8 +1,29 @@
-# React + Vite
+# 🧠 AI-Powered Rich Text Editor for Spam Detection
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **Rich Text Editor** built with **React + Vite**, integrated with **AI-based classification** to detect whether the input text is **spam or not**.
 
-Currently, two official plugins are available:
+<img src="./public/image.png" width="700" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## 🚀 Features
+
+- 📝 Fully functional rich text editor
+- 🤖 AI model integration for real-time classification
+- 🧠 Sentiment or spam detection
+- 💬 Displays label (e.g., `SPAM` / `NOT SPAM` or `POSITIVE` / `NEGATIVE`)
+- 🎯 Confidence score for prediction
+- ⚡ Built with React + Vite for fast performance
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, Vite
+- **AI/ML**: Transformers via `@xenova/transformers`
+- **Editor**: Rich Text Editor (e.g., React Quill, Slate, or similar)
+
+---
+
+
+
